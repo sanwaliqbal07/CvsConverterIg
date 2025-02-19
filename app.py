@@ -9,12 +9,11 @@ st.title("🧹 Data Sweeper")
 st.write("Transform your files between CSV and Excel formats with built-in data cleaning and visualizations.")
 
 # Advanced Custom CSS for better UI
-
 def set_custom_css():
     st.markdown("""
         <style>
         .stApp {
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
             color: #ffffff;
             font-family: Arial, sans-serif;
             padding: 20px;
@@ -24,17 +23,22 @@ def set_custom_css():
             max-width: 1200px;
         }
         .stButton>button {
-            background-color: #6a11cb;
+            background: linear-gradient(90deg, #00d4ff, #0072ff);
             color: white;
             border-radius: 10px;
-            padding: 10px;
+            padding: 12px;
             border: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.6);
         }
         .stButton>button:hover {
-            background-color: #2575fc;
+            background: linear-gradient(90deg, #00f2ff, #00aaff);
+            box-shadow: 0px 0px 12px rgba(0, 255, 255, 1);
+            transform: scale(1.05);
         }
         .stDataFrame {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 10px;
         }
@@ -44,6 +48,7 @@ def set_custom_css():
         </style>
     """, unsafe_allow_html=True)
 set_custom_css()
+
 
 # File uploader
 uploaded_files = st.file_uploader("Upload Your File (CSV or Excel):", type=["csv", "xlsx"], accept_multiple_files=True)
